@@ -7,23 +7,23 @@ const ingredients = [
   'Приправы',
 ];
 
-const ingridContainerRef = document.querySelector('#ingridients');
+//console.log(ingredients);
+
+//const ingridContainerRef = document.querySelector('#ingridients');
 
 
 
-for (ingredient of ingredients) {
-
-    let a = '';
+function getIngrid(arr) {
+    const items = arr.map(item => document.createElement('li').textContent = item);
+    const ingridContainerRef = document.querySelector('#ingridients');
+    ingridContainerRef.append(item);
     
-    document.createElement('li');
-   a += ingredient;
-
 }
 
 
-ingridContainerRef.append(a);
 
-console.log(ingridContainerRef);
+
+console.log(getIngrid(ingredients));
 
 
 //ingridContainerRef.append(ingredients.forEach(element => document.createElement('li').classList.add()));
