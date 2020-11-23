@@ -16,7 +16,8 @@ const ingredients = [
 function getIngrid(arr) {
     const items = arr.map(item => document.createElement('li').textContent = item);
     const ingridContainerRef = document.querySelector('#ingridients');
-    ingridContainerRef.append(item);
+    ingridContainerRef.append(items);
+  return ingridContainerRef;
     
 }
 
