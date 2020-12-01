@@ -7,24 +7,34 @@ const ingredients = [
   'Приправы',
 ];
 
-//console.log(ingredients);
+// //console.log(ingredients);
 
-//const ingridContainerRef = document.querySelector('#ingridients');
+// //const ingridContainerRef = document.querySelector('#ingridients');
 
 
 
-function getIngrid(arr) {
-    const items = arr.map(item => document.createElement('li').textContent = item);
-    const ingridContainerRef = document.querySelector('#ingridients');
-    ingridContainerRef.append(items);
-  return ingridContainerRef;
+// function getIngrid(arr) {
+//     const items = arr.map(item => document.createElement('li').textContent = item);
+//     const ingridContainerRef = document.querySelector('#ingridients');
+//     ingridContainerRef.append(items);
+//   return ingridContainerRef;
     
-}
+// }
+'use strict'
+let ulList = document.getElementById("ingredients");
+const foodIngredients = ingredients.forEach(ingredient => {
+  let items = document.createElement("li");
+  items.innerHTML = ingredients;
+  ulList.append(items);
+  parent.append(...items)
+});
+
+console.log(foodIngredients);
 
 
 
 
-console.log(getIngrid(ingredients));
+// console.log(getIngrid(ingredients));
 
 
-//ingridContainerRef.append(ingredients.forEach(element => document.createElement('li').classList.add()));
+// //ingridContainerRef.append(ingredients.forEach(element => document.createElement('li').classList.add()));
