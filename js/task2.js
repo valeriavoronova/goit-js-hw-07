@@ -7,6 +7,14 @@ const ingredients = [
   'Приправы',
 ];
 
+let ulList = document.getElementById("ingredients");
+
+ingredients.forEach(ingredient => {
+	let items = document.createElement("li");
+	items.innerHTML = ingredient;
+	ulList.append(items);
+});
+
 // //console.log(ingredients);
 
 // //const ingridContainerRef = document.querySelector('#ingridients');
