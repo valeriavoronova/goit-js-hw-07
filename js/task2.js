@@ -28,16 +28,16 @@ ingredients.forEach(ingredient => {
 //   return ingridContainerRef;
     
 // }
-'use strict'
-let ulList = document.getElementById("ingredients");
-const foodIngredients = ingredients.forEach(ingredient => {
-  let items = document.createElement("li");
-  items.innerHTML = ingredients;
-  ulList.append(items);
-  parent.append(...items)
-});
+// 'use strict'
+// let ulList = document.getElementById("ingredients");
+// const foodIngredients = ingredients.forEach(ingredient => {
+//   let items = document.createElement("li");
+//   items.innerHTML = ingredients;
+//   ulList.append(items);
+//   parent.append(...items)
+// });
 
-console.log(foodIngredients);
+// console.log(foodIngredients);
 
 
 
