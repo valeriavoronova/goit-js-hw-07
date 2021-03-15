@@ -9,11 +9,19 @@ const ingredients = [
 
 let ulList = document.getElementById("ingredients");
 
-ingredients.forEach(ingredient => {
-	let items = document.createElement("li");
-	items.innerHTML = ingredient;
-	ulList.append(items);
+ingredients.map(ingredient => {
+ let items = document.createElement("li");
+ items.innerHTML = ingredient;
+ ulList.append(items);
 });
+
+// let ulList = document.getElementById("ingredients");
+
+// ingredients.forEach(ingredient => {
+// 	let items = document.createElement("li");
+// 	items.innerHTML = ingredient;
+// 	ulList.append(items);
+// });
 
 // //console.log(ingredients);
 
