@@ -7,13 +7,22 @@ const ingredients = [
   'Приправы',
 ];
 
-let ulList = document.getElementById("ingredients");
+  let liStr = '';
+  for(var i = 0; i < ingredients.length; i += 1){
+    liStr += '<li>'+ingredients[i]+'</li>';
+  }
+  console.log(liStr);
+  let ulList = document.getElementById("ingredients3");
+  ulList.insertAdjacentHTML("afterBegin", liStr);
 
-ingredients.map(ingredient => {
- let items = document.createElement("li");
- items.innerHTML = ingredient;
- ulList.append(items);
-});
+
+// let ulList = document.getElementById("ingredients");
+
+// ingredients.map(ingredient => {
+//  let items = document.createElement("li");
+//  items.innerHTML = ingredient;
+//  ulList.append(items);
+// });
 
 // let ulList = document.getElementById("ingredients");
 
