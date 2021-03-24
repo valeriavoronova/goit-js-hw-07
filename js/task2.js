@@ -8,7 +8,7 @@ const ingredients = [
 ];
 
   let liStr = '';
-  for(var i = 0; i < ingredients.length; i += 1){
+  for(let i = 0; i < ingredients.length; i += 1){
     liStr += '<li>'+ingredients[i]+'</li>';
   }
   console.log(liStr);
