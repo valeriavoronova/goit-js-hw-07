@@ -75,4 +75,5 @@ typings/
 # FuseBox cache
 .fusebox/
 
-.DS_store
+*.DS_Store
+._*
