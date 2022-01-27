@@ -33,10 +33,17 @@ function onImageClick(e){
 }
 
 
-console.log(galleryRef);
+console.log(items);
 
-//script https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js
-//head https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
+
+// "C:/Users/val/AppData/Local/Microsoft/TypeScript/4.5/node_modules/@types/basiclightbox/index"
+import * as basicLightbox from 'basiclightbox';
+
+const instance = basicLightbox.create(`
+    <img src="assets/images/image.png" width="800" height="600">
+`)
+
+instance.show()
 
 
 
