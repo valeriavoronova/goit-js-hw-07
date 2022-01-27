@@ -28,6 +28,7 @@ function onImageClick(e){
     if(e.target.nodeName !== 'IMG'){
         return;
     }
+    e.preventDefault();
     console.log("click", e);
 }
 
