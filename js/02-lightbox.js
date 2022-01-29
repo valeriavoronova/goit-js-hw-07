@@ -13,13 +13,15 @@ galleryRef.insertAdjacentHTML("beforeend", items);
 //console.log(galleryItems);
 galleryRef.addEventListener("click", onImageClick);
 
+let gallery = new SimpleLightbox('.gallery a', {captionsData: `alt`, captionDelay: 250});
+
 function onImageClick(e){
   if(e.target.nodeName !== 'IMG'){
       return;
   }
   e.preventDefault();
 
-  let gallery = new SimpleLightbox('.gallery a', {captionsData: `alt`, captionDelay: 250});
+ 
   // gallery.on('shown.simplelightbox', function () {
   //   e.target.captions = e.target.alt;
   // 	console.log(e.target.captions);
