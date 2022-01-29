@@ -21,6 +21,7 @@ const items = galleryItems.map(( { preview, original, description } ) => {
 
 galleryRef.insertAdjacentHTML("beforeend", items);
 
+
 //create event
 galleryRef.addEventListener("click", onImageClick);
 
@@ -28,7 +29,17 @@ function onImageClick(e){
     if(e.target.nodeName !== 'IMG'){
         return;
     }
-    e.preventDefault();
+
+    //if (imRef.forEach(value => value.dataset.source) === linkRef.forEach( value => value.href)){
+      e.preventDefault();
+      const instance = basicLightbox.create(
+      `<img src="${e.target.dataset.source}" width="800" height="600">
+      `)
+
+      instance.show();
+  //}
+
+   
     console.log("click", e);
 }
 
@@ -37,13 +48,13 @@ function onImageClick(e){
 
 
 // "C:/Users/val/AppData/Local/Microsoft/TypeScript/4.5/node_modules/@types/basiclightbox/index"
-import * as basicLightbox from 'basiclightbox';
+//import * as basicLightbox from 'basiclightbox';
 
-const instance = basicLightbox.create(`
-    <img src="assets/images/image.png" width="800" height="600">
-`)
+// const instance = basicLightbox.create(`
+//     <img src="https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677_1280.jpg" width="800" height="600">
+// `)
 
-instance.show()
+// instance.show()
 
 
 
