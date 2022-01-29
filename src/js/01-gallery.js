@@ -33,7 +33,7 @@ function onImageClick(e){
 }
 
 
-console.log(items);
+// console.log(items);
 
 
 // "C:/Users/val/AppData/Local/Microsoft/TypeScript/4.5/node_modules/@types/basiclightbox/index"
@@ -44,6 +44,7 @@ const instance = basicLightbox.create(`
 `)
 
 instance.show()
+
 
 
 
