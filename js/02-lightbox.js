@@ -19,20 +19,13 @@ function onImageClick(e){
   }
   e.preventDefault();
 
-  let gallery = new SimpleLightbox('.gallery a');
-  // gallery.on('show.simplelightbox', function () {
-  	
-  //   console.log(e.target.alt)
+  let gallery = new SimpleLightbox('.gallery a', {captionsData: `alt`, captionDelay: 250});
+  // gallery.on('shown.simplelightbox', function () {
+  //   e.target.captions = e.target.alt;
+  // 	console.log(e.target.captions);
 
   // });
-  
 
-
-
-    //import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm";
-//     
-//     show.simplelightbox();
-//     console.log(lightbox)
  }
 
 //  :pushpin: Модальное окно с увеличенным изображением должно открываться исключительно при клике на само изображение 
