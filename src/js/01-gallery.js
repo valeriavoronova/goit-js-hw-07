@@ -21,7 +21,7 @@ const items = galleryItems.map(( { preview, original, description } ) => {
 
 galleryRef.insertAdjacentHTML("beforeend", items);
 
-
+//window.addEventListener('keydown', onClose);
 //create event
 galleryRef.addEventListener("click", onImageClick);
 
@@ -30,18 +30,35 @@ function onImageClick(e){
         return;
     }
 
-    //if (imRef.forEach(value => value.dataset.source) === linkRef.forEach( value => value.href)){
       e.preventDefault();
+
       const instance = basicLightbox.create(
       `<img src="${e.target.dataset.source}" width="800" height="600">
       `)
 
       instance.show();
-  //}
 
+      if (basicLightbox.visible()){
+        window.addEventListener('keydown', onEscClose);
+        //console.log('повесила слушатель');
+      }
+
+      // if(!basicLightbox.visible()){
+      //   window.removeEventListener('keydown', onEscClose); // пытаюсь снять если модалка закрыта, правильно?
+      //   console.log('сняла слушатель');
+      // }
+
+      function onEscClose(e){
+        //console.log(e);
+        if(e.code === 'Escape')
+        instance.close();
+
+      }
    
-    console.log("click", e);
+    //console.log("click", e);
 }
+
+
 
 
 // console.log(items);
