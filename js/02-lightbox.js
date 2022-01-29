@@ -19,12 +19,13 @@ function onImageClick(e){
   }
   e.preventDefault();
 
-  let gallery = new SimpleLightbox('.gallery a', captions = true);
-  gallery.on('show.simplelightbox', function () {
+  let gallery = new SimpleLightbox('.gallery a');
+  // gallery.on('show.simplelightbox', function () {
   	
-    console.log(e.target.alt)
+  //   console.log(e.target.alt)
 
-  });
+  // });
+  
 
 
 
