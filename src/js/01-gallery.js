@@ -21,7 +21,6 @@ const items = galleryItems.map(( { preview, original, description } ) => {
 
 galleryRef.insertAdjacentHTML("beforeend", items);
 
-//window.addEventListener('keydown', onClose);
 //create event
 galleryRef.addEventListener("click", onImageClick);
 
@@ -34,7 +33,10 @@ function onImageClick(e){
 
       const instance = basicLightbox.create(
       `<img src="${e.target.dataset.source}" width="800" height="600">
-      `)
+      `, {
+        onShow: (instance) => console.log('onShow', instance),
+        onClose: (instance) => console.log('onClose', instance)
+      })
 
       instance.show();
 
@@ -43,35 +45,18 @@ function onImageClick(e){
         //console.log('повесила слушатель');
       }
 
-      // if(!basicLightbox.visible()){
-      //   window.removeEventListener('keydown', onEscClose); // пытаюсь снять если модалка закрыта, правильно?
-      //   console.log('сняла слушатель');
-      // }
-
       function onEscClose(e){
         //console.log(e);
         if(e.code === 'Escape')
         instance.close();
 
       }
-   
-    //console.log("click", e);
 }
 
 
 
 
-// console.log(items);
 
-
-// "C:/Users/val/AppData/Local/Microsoft/TypeScript/4.5/node_modules/@types/basiclightbox/index"
-//import * as basicLightbox from 'basiclightbox';
-
-// const instance = basicLightbox.create(`
-//     <img src="https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677_1280.jpg" width="800" height="600">
-// `)
-
-// instance.show()
 
 
 
