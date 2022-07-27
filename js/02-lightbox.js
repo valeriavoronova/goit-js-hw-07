@@ -11,15 +11,15 @@ const items = galleryItems.map(( { preview, original, description } ) => {
 
 galleryRef.insertAdjacentHTML("beforeend", items);
 //console.log(galleryItems);
-galleryRef.addEventListener("click", onImageClick);
+//galleryRef.addEventListener("click", onImageClick);
 
 let gallery = new SimpleLightbox('.gallery a', {captionsData: `alt`, captionDelay: 250});
 
-function onImageClick(e){
-  if(e.target.nodeName !== 'IMG'){
-      return;
-  }
-  e.preventDefault();
+// function onImageClick(e){
+//   if(e.target.nodeName !== 'IMG'){
+//       return;
+//   }
+//   e.preventDefault();
 
  
   // gallery.on('shown.simplelightbox', function () {
@@ -28,7 +28,7 @@ function onImageClick(e){
 
   // });
 
- }
+//  }
 
 //  :pushpin: Модальное окно с увеличенным изображением должно открываться исключительно при клике на само изображение 
 //  (делайте проверку на то, куда пришелся клик пользователя, внутри функции, отвечающей за открытие модального окна); 

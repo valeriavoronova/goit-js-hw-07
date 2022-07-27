@@ -32,16 +32,16 @@ function onImageClick(e){
       const instance = basicLightbox.create(
       `<img src="${e.target.dataset.source}" width="800" height="600">
       `, {
-        onShow: (instance) => console.log('onShow', instance),
-        onClose: (instance) => console.log('onClose', instance)
+        onShow: () => window.addEventListener('keydown', onEscClose),
+        onClose: () => window.removeEventListener('keydown', onEscClose)
       })
 
       instance.show();
 
-      if (basicLightbox.visible()){
-        window.addEventListener('keydown', onEscClose);
-        //console.log('повесила слушатель');
-      }
+      // if (basicLightbox.visible()){
+      //   window.addEventListener('keydown', onEscClose);
+      //   //console.log('повесила слушатель');
+      // }
 
       function onEscClose(e){
         //console.log(e);
